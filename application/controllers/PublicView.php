@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class PublicViewController extends CI_Controller
+class PublicView extends CI_Controller
 {
 
 
@@ -16,6 +16,6 @@ class PublicViewController extends CI_Controller
         $data = array('title' => "Public Page");
         $data['videoList'] = $this->list_model->get_all();
 
-        $this->load->view('public_view/public_view', $data);
+        $this->load->view('public_view/index', $data);
     }
 }
